@@ -1,0 +1,30 @@
+version: '3'
+services:
+  movies:
+  images: kodavaluri/moviesrepopaytm:latest
+  port:
+    - "80:80"
+  deploy:
+    replicas: 3
+
+ train:
+  images: kodavaluri/trainrepopaytm:latest
+  port:
+    - "81:80"
+  deploy:
+    replicas: 3  
+    
+recharge:
+  images: kodavaluri/rechargerepopaytm:latest
+  port:
+    - "82:80"
+  deploy:
+    replicas: 3
+
+
+dth:
+  images: kodavaluri/dthrepopaytm:latest
+  port:
+    - "83:80"
+  deploy:
+    replicas: 3
